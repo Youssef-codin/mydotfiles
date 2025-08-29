@@ -32,7 +32,7 @@ alias lzdot='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 # Precommands (e.g., sudo, time): Neon blue
 ZSH_HIGHLIGHT_STYLES[precommand]='fg=#04d9ff'  
 
-neofetch
+fastfetch
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
