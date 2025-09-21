@@ -6,8 +6,8 @@
             "1": "light_magenta"
         },
         "source": "~/.config/fastfetch/logos/ascii.txt",
-        "height": 15,
-        "width": 30,
+        "height": 12,
+        "width": 1,
         "padding": {
             "top": 4,
             "left": 3
@@ -51,7 +51,7 @@
         "break",
         {
             "type": "custom",
-            "format": "\u001b[90m┌──────────────────Desktop──────────────────┐"
+            "format": "\u001b[90m┌──────────────────Desktop───────────────────┐"
         },
         {
             "type": "de",
