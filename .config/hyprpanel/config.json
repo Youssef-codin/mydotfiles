@@ -188,5 +188,6 @@
   "menus.dashboard.shortcuts.left.shortcut2.tooltip": "Terminal",
   "menus.dashboard.shortcuts.left.shortcut3.icon": "󰡞",
   "menus.dashboard.shortcuts.left.shortcut3.tooltip": "Task Manager",
-  "menus.dashboard.shortcuts.left.shortcut3.command": "kitty btop"
+  "menus.dashboard.shortcuts.left.shortcut3.command": "kitty btop",
+  "menus.dashboard.directories.left.directory3.command": "bash -c \"xdg-open $HOME/projects/\""
 }
