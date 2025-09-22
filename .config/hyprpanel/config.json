@@ -36,7 +36,7 @@
   "theme.bar.transparent": false,
   "theme.bar.buttons.style": "default",
   "theme.bar.background": "#11111b",
-  "theme.bar.border_radius": "1em",
+  "theme.bar.border_radius": "2em",
   "theme.bar.opacity": 30,
   "theme.bar.buttons.dashboard.icon": "#80dceb",
   "theme.bar.buttons.workspaces.enableBorder": false,
