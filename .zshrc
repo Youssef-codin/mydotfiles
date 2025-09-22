@@ -28,6 +28,7 @@ ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=#ffff00,bold'
 ZSH_HIGHLIGHT_STYLES[alias]='fg=#00ffff'  
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias lzdot='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias confhypr='nvim ~/.config/hypr/hyprland.conf'
 
 # Precommands (e.g., sudo, time): Neon blue
 ZSH_HIGHLIGHT_STYLES[precommand]='fg=#04d9ff'  
