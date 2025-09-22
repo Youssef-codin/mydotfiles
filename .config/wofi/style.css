@@ -1,5 +1,5 @@
 window {
-	background-color: transparent;
+	background-color: #1e1e2e;
 }
 
 * {
@@ -20,7 +20,7 @@ window {
 	border-radius: 1em;
 	color: @text;
 	font-size: 1rem;
-	background-color: transparent;
+	background-color: #@base color: #c0caf5;
 }
 
 
@@ -63,6 +63,9 @@ window {
 ##entry:selected {
 	background: linear-gradient(90deg, #90cdfa 0%, #b69bf1 80%);
 }
+
+
+
 
 @define-color	rosewater #f5e0dc;
 @define-color	rosewater-rgb rgb(245, 224, 220);
