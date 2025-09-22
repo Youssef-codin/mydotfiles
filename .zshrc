@@ -29,6 +29,7 @@ ZSH_HIGHLIGHT_STYLES[alias]='fg=#00ffff'
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias lzdot='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias confhypr='nvim ~/.config/hypr/hyprland.conf'
+alias hyprmatrix='cmatrix -C magenta'
 
 # Precommands (e.g., sudo, time): Neon blue
 ZSH_HIGHLIGHT_STYLES[precommand]='fg=#04d9ff'  
