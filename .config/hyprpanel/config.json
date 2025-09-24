@@ -36,7 +36,7 @@
   "theme.bar.transparent": false,
   "theme.bar.buttons.style": "default",
   "theme.bar.background": "#11111b",
-  "theme.bar.border_radius": "2em",
+  "theme.bar.border_radius": "0.5em",
   "theme.bar.opacity": 50,
   "theme.bar.buttons.dashboard.icon": "#80dceb",
   "theme.bar.buttons.workspaces.enableBorder": false,
@@ -189,5 +189,9 @@
   "menus.dashboard.shortcuts.left.shortcut3.icon": "󰡞",
   "menus.dashboard.shortcuts.left.shortcut3.tooltip": "Task Manager",
   "menus.dashboard.shortcuts.left.shortcut3.command": "kitty btop",
-  "menus.dashboard.directories.left.directory3.command": "bash -c \"xdg-open $HOME/projects/\""
+  "menus.dashboard.directories.left.directory3.command": "bash -c \"xdg-open $HOME/projects/\"",
+  "theme.bar.buttons.opacity": 100,
+  "theme.bar.buttons.background_opacity": 70,
+  "theme.bar.outer_spacing": "0.5em",
+  "theme.bar.dropdownGap": "2.9em"
 }
