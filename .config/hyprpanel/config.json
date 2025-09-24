@@ -62,7 +62,7 @@
   "menus.dashboard.shortcuts.left.shortcut2.command": "kitty",
   "theme.bar.buttons.radius": "0.9em",
   "theme.bar.buttons.innerRadiusMultiplier": "0.9",
-  "theme.bar.margin_sides": "0.5em",
+  "theme.bar.margin_sides": "0.75em",
   "menus.clock.time.hideSeconds": false,
   "theme.bar.buttons.workspaces.pill.radius": "1.9rem * 0.6",
   "menus.dashboard.powermenu.avatar.name": "joe-arch",
