@@ -30,6 +30,11 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias lzdot='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias confhypr='nvim ~/.config/hypr/hyprland.conf'
 alias hyprmatrix='cmatrix -C magenta'
+gpprun() {
+    local src="$1"
+    local out="${src%.*}"  # strip extension -> main.cpp -> main
+    g++ "$src" -o "$out" && ./"$out"
+}
 
 # Precommands (e.g., sudo, time): Neon blue
 ZSH_HIGHLIGHT_STYLES[precommand]='fg=#04d9ff'  
