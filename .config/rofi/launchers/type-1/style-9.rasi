@@ -66,7 +66,7 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               10px;
+    border-radius:               0px;
     border-color:                @border-colour;
     cursor:                      "default";
     /* Backgroud Colors */
@@ -110,7 +110,7 @@ inputbar {
     margin:                      0px;
     padding:                     8px 12px;
     border:                      0px solid;
-    border-radius:               8px;
+    border-radius:               0px;
     border-color:                @border-colour;
     background-color:            @alternate-background;
     text-color:                  @foreground-colour;
@@ -181,7 +181,7 @@ listview {
     margin:                      0px;
     padding:                     10px;
     border:                      2px 2px 2px 0px;
-    border-radius:               0px 8px 8px 0px;
+    border-radius:               0px 0px 0px 0px;
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;
@@ -201,7 +201,7 @@ element {
     margin:                      0px;
     padding:                     10px;
     border:                      0px solid;
-    border-radius:               8px;
+    border-radius:               0px;
     border-color:                @border-colour;
     background-color:            transparent;
     text-color:                  @foreground-colour;
@@ -267,7 +267,7 @@ mode-switcher{
     margin:                      0px;
     padding:                     0px 0px;
     border:                      0px solid;
-    border-radius:               8px 0px 0px 8px;
+    border-radius:               0px 0px 0px 0px;
     border-color:                @border-colour;
     background-color:            @alternate-background;
     text-color:                  @foreground-colour;
@@ -285,7 +285,7 @@ button {
 }
 button selected {
     border:                      2px 0px 2px 2px;
-    border-radius:               8px 0px 0px 8px;
+    border-radius:               0px 0px 0px 0px;
     border-color:                @border-colour;
     background-color:            var(selected-normal-foreground);
     text-color:                  var(selected-normal-background);
@@ -305,7 +305,7 @@ message {
 textbox {
     padding:                     12px;
     border:                      0px solid;
-    border-radius:               8px;
+    border-radius:               0px;
     border-color:                @border-colour;
     background-color:            @alternate-background;
     text-color:                  @foreground-colour;
@@ -319,7 +319,7 @@ textbox {
 error-message {
     padding:                     10px;
     border:                      2px solid;
-    border-radius:               8px;
+    border-radius:               0px;
     border-color:                @border-colour;
     background-color:            @background-colour;
     text-color:                  @foreground-colour;
