@@ -29,6 +29,7 @@ ZSH_HIGHLIGHT_STYLES[alias]='fg=#00ffff'
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias lzdot='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias confhypr='nvim ~/.config/hypr/hyprland.conf'
+alias confkitty='nvim ~/.config/kitty/kitty.conf'
 alias hyprmatrix='cmatrix -C magenta'
 gpprun() {
     local src="$1"
