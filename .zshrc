@@ -26,7 +26,7 @@ ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=#ffff00,bold'
 
 # Aliases: Cyan (to differentiate from commands)
 ZSH_HIGHLIGHT_STYLES[alias]='fg=#00ffff'  
-alias ls='ls -C -t -U -A -p --color=auto'
+alias ls='ls -C -t -X -A -p --color=auto'
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias lzdot='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias confhypr='nvim ~/.config/hypr/hyprland.conf'
