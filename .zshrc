@@ -43,7 +43,11 @@ ZSH_HIGHLIGHT_STYLES[precommand]='fg=#04d9ff'
 
 fastfetch
 
+eval "$(zoxide init zsh)"
+source <(fzf --zsh)
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 export PATH="$PATH:$HOME/.dotnet/tools"
+export PATH="/home/joe-arch/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/home/joe-arch/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
