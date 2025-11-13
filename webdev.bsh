@@ -1,4 +1,4 @@
-SESH="Web Dev"
+SESH="WebDev"
 
 tmux has-session -t $SESH 2>/dev/null
 
