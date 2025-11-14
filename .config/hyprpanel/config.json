@@ -13,10 +13,10 @@
   "theme.bar.enableShadow": true,
   "theme.bar.buttons.dashboard.enableBorder": false,
   "bar.workspaces.show_icons": false,
-  "bar.workspaces.show_numbered": true,
+  "bar.workspaces.show_numbered": false,
   "bar.workspaces.workspaceMask": false,
-  "bar.workspaces.showWsIcons": false,
-  "bar.workspaces.numbered_active_indicator": "underline",
+  "bar.workspaces.showWsIcons": true,
+  "bar.workspaces.numbered_active_indicator": "highlight",
   "wallpaper.enable": true,
   "theme.matugen": false,
   "wallpaper.image": "/home/joe-arch/Pictures/Neon-ish/1.png",
@@ -193,5 +193,10 @@
   "theme.bar.buttons.opacity": 100,
   "theme.bar.buttons.background_opacity": 70,
   "theme.bar.outer_spacing": "0.5em",
-  "theme.bar.dropdownGap": "3.5em"
+  "theme.bar.dropdownGap": "3.5em",
+  "bar.workspaces.showApplicationIcons": true,
+  "theme.bar.buttons.workspaces.smartHighlight": true,
+  "bar.workspaces.ignored": "-98",
+  "bar.workspaces.monitorSpecific": true,
+  "bar.workspaces.applicationIconEmptyWorkspace": ""
 }
