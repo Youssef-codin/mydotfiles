@@ -2,8 +2,8 @@
   "bar.customModules.storage.paths": [
     "/"
   ],
-  "theme.font.name": "JetBrainsMono Nerd Font",
-  "theme.font.label": "JetBrainsMono Nerd Font Medium",
+  "theme.font.name": "Inconsolata Nerd Font Mono",
+  "theme.font.label": "Inconsolata Nerd Font Mono Bold",
   "theme.font.size": "1.1rem",
   "theme.bar.floating": true,
   "theme.bar.location": "top",
@@ -15,7 +15,7 @@
   "bar.workspaces.show_icons": false,
   "bar.workspaces.show_numbered": false,
   "bar.workspaces.workspaceMask": false,
-  "bar.workspaces.showWsIcons": true,
+  "bar.workspaces.showWsIcons": false,
   "bar.workspaces.numbered_active_indicator": "highlight",
   "wallpaper.enable": true,
   "theme.matugen": false,
@@ -45,7 +45,7 @@
   "menus.media.hideAlbum": true,
   "menus.media.hideAuthor": false,
   "menus.media.displayTime": true,
-  "notifications.position": "bottom right",
+  "notifications.position": "top right",
   "theme.notification.border_radius": "1em",
   "menus.clock.weather.location": "Cairo",
   "menus.clock.weather.enabled": false,
@@ -63,7 +63,7 @@
   "theme.bar.buttons.radius": "0.9em",
   "theme.bar.buttons.innerRadiusMultiplier": "0.9",
   "theme.bar.margin_sides": "0.75em",
-  "menus.clock.time.hideSeconds": false,
+  "menus.clock.time.hideSeconds": true,
   "theme.bar.buttons.workspaces.pill.radius": "1.9rem * 0.6",
   "menus.dashboard.powermenu.avatar.name": "joe-arch",
   "menus.dashboard.controls.enabled": true,
@@ -74,14 +74,15 @@
   "bar.battery.hideLabelWhenFull": true,
   "bar.clock.format": "%a %d/%m %I:%M %p",
   "bar.layouts": {
-    "0": {
+    "*": {
       "left": [
         "dashboard",
-        "workspaces",
-        "windowtitle"
+        "updates",
+        "windowtitle",
+        "media"
       ],
       "middle": [
-        "media"
+        "workspaces"
       ],
       "right": [
         "volume",
@@ -89,36 +90,6 @@
         "bluetooth",
         "battery",
         "systray",
-        "clock",
-        "notifications"
-      ]
-    },
-    "1": {
-      "left": [
-        "dashboard",
-        "workspaces",
-        "windowtitle"
-      ],
-      "middle": [
-        "media"
-      ],
-      "right": [
-        "volume",
-        "clock",
-        "notifications"
-      ]
-    },
-    "2": {
-      "left": [
-        "dashboard",
-        "workspaces",
-        "windowtitle"
-      ],
-      "middle": [
-        "media"
-      ],
-      "right": [
-        "volume",
         "clock",
         "notifications"
       ]
@@ -194,9 +165,15 @@
   "theme.bar.buttons.background_opacity": 70,
   "theme.bar.outer_spacing": "0.5em",
   "theme.bar.dropdownGap": "3.5em",
-  "bar.workspaces.showApplicationIcons": true,
+  "bar.workspaces.showApplicationIcons": false,
   "theme.bar.buttons.workspaces.smartHighlight": true,
   "bar.workspaces.ignored": "-98",
-  "bar.workspaces.monitorSpecific": true,
-  "bar.workspaces.applicationIconEmptyWorkspace": ""
+  "bar.workspaces.monitorSpecific": false,
+  "bar.workspaces.applicationIconEmptyWorkspace": "",
+  "notifications.ignore": [
+    "rhythmbox"
+  ],
+  "theme.osd.enable": true,
+  "bar.customModules.updates.extendedTooltip": true,
+  "theme.bar.menus.menu.clock.scaling": 100
 }
