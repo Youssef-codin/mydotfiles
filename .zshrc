@@ -29,14 +29,18 @@ ZSH_HIGHLIGHT_STYLES[alias]='fg=#00ffff'
 alias ls='ls -C -t -X -A -p --color=auto'
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias lzdot='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias lz='lazygit'
 alias confhypr='nvim ~/.config/hypr/hyprland.conf'
 alias confkitty='nvim ~/.config/kitty/kitty.conf'
 alias hyprmatrix='cmatrix -C magenta'
+
 alias webdev='~/scripts/webdev.bsh'
 alias java='~/scripts/java.bsh'
 alias c#='~/scripts/csharp.bsh'
 alias cpp='~/scripts/cpp.bsh'
 alias py='~/scripts/python.bsh'
+
+alias vnc='~/scripts/wayvnc.bsh'
 
 gpprun() {
     local src="$1"

@@ -90,7 +90,7 @@ P.S. You can delete this when you're done too. It's your config now! :)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- MY KEYS
+-- NOTE: MY OPTIONS / KEYBINDS
 vim.opt.guicursor = 'n-v-c-sm:block,i-ci-ve:block,r-cr-o:block'
 vim.opt.relativenumber = true
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { noremap = true })
@@ -105,28 +105,7 @@ vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.keymap.set('v', '<C-c>', '"+y', { noremap = true, silent = true })
-vim.api.nvim_create_user_command('OpenSceneBuilder', function()
-  vim.fn.jobstart { 'scenebuilder', vim.fn.expand '%:p' }
-end, { desc = 'Open current FXML file in Scene Builder' })
 vim.keymap.set('x', '<leader>p', '"_dP', { noremap = true, silent = true })
-
--- barbar keys
-local map = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
-
-map('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
-map('n', '<A-.>', '<Cmd>BufferNext<CR>', opts)
-map('n', '<A-1>', '<Cmd>BufferGoto 1<CR>', opts)
-map('n', '<A-2>', '<Cmd>BufferGoto 2<CR>', opts)
-map('n', '<A-3>', '<Cmd>BufferGoto 3<CR>', opts)
-map('n', '<A-4>', '<Cmd>BufferGoto 4<CR>', opts)
-map('n', '<A-5>', '<Cmd>BufferGoto 5<CR>', opts)
-map('n', '<A-6>', '<Cmd>BufferGoto 6<CR>', opts)
-map('n', '<A-7>', '<Cmd>BufferGoto 7<CR>', opts)
-map('n', '<A-8>', '<Cmd>BufferGoto 8<CR>', opts)
-map('n', '<A-9>', '<Cmd>BufferGoto 9<CR>', opts)
-map('n', '<A-0>', '<Cmd>BufferLast<CR>', opts)
-map('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
@@ -464,6 +443,11 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
       vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
+      vim.keymap.set('n', '<leader>sl', function()
+        local dir = vim.fn.expand '%:p:h' -- directory of current file
+        vim.cmd('cd ' .. dir) -- change working directory
+        builtin.git_files() -- open telescope git_files
+      end, { desc = '[S]earch by Git Files (local)' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
 
       -- Slightly advanced example of overriding default behavior and theme
