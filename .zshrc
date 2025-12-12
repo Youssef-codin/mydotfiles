@@ -33,6 +33,7 @@ alias lz='lazygit'
 alias confhypr='nvim ~/.config/hypr/hyprland.conf'
 alias confkitty='nvim ~/.config/kitty/kitty.conf'
 alias hyprmatrix='cmatrix -C magenta'
+alias psql='sudo systemctl start postgresql'
 
 alias webdev='~/scripts/webdev.bsh'
 alias java='~/scripts/java.bsh'
