@@ -40,6 +40,7 @@ alias java='~/scripts/java.bsh'
 alias c#='~/scripts/csharp.bsh'
 alias cpp='~/scripts/cpp.bsh'
 alias py='~/scripts/python.bsh'
+alias ts='~/scripts/typescript.bsh'
 
 alias vnc='~/scripts/wayvnc.bsh'
 
