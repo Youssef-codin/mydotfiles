@@ -412,18 +412,35 @@ require('lazy').setup({
       -- [[ Configure Telescope ]]
       -- See `:help telescope` and `:help telescope.setup()`
       require('telescope').setup {
-        -- You can put your default mappings / updates / etc. in here
-        --  All the info you're looking for is in `:help telescope.setup()`
-        --
-        -- defaults = {
-        --   mappings = {
-        --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-        --   },
-        -- },
-        -- pickers = {}
+        defaults = {
+          prompt_prefix = '   ',
+          selection_caret = '❯ ',
+          path_display = { 'truncate' },
+          file_ignore_patterns = {
+            'node_modules',
+            'vendor',
+            '.git/',
+            'dist',
+            'build',
+          },
+          layout_strategy = 'center',
+          layout_config = {
+            anchor = 'S',
+            height = 0.40,
+            width = 0.94,
+            preview_cutoff = 1,
+          },
+          borderchars = {
+            prompt = { ' ', ' ', ' ', ' ', '┌', '┐', ' ', ' ' },
+            results = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
+            preview = { ' ', ' ', ' ', ' ', ' ', ' ', '┘', '└' },
+          },
+          border = true,
+        },
+
         extensions = {
           ['ui-select'] = {
-            require('telescope.themes').get_dropdown(),
+            require('telescope.themes').get_cursor(),
           },
         },
       }
@@ -432,7 +449,7 @@ require('lazy').setup({
       pcall(require('telescope').load_extension, 'fzf')
       pcall(require('telescope').load_extension, 'ui-select')
 
-      -- See `:help telescope.builtin`
+      -- See `:help telescope.b.startinguiltin`
       local builtin = require 'telescope.builtin'
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
@@ -445,7 +462,6 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
 
       vim.keymap.set('n', '<leader>sl', function()
-        local builtin = require 'telescope.builtin'
         local utils = require 'telescope.utils'
 
         local ok, cwd = pcall(utils.get_git_root)
@@ -470,7 +486,6 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>/', function()
         -- You can pass additional configuration to Telescope to change the theme, layout, etc.
         builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-          winblend = 10,
           previewer = false,
         })
       end, { desc = '[/] Fuzzily search in current buffer' })
@@ -727,6 +742,26 @@ require('lazy').setup({
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
+        jdtls = {
+          settings = {
+            java = {
+              format = {
+                settings = {
+                  -- Use Google Java Format (or eclipse, depending on your preference)
+                  formatProfile = 'GoogleStyle',
+                  -- Or disable auto-formatting entirely:
+                  -- enabled = false,
+                },
+              },
+              -- Disable the insane line-breaking
+              codeGeneration = {
+                hashCodeEquals = {
+                  useInstanceof = true,
+                },
+              },
+            },
+          },
+        },
 
         lua_ls = {
           -- cmd = { ... },
@@ -952,7 +987,7 @@ require('lazy').setup({
       ---@diagnostic disable-next-line: missing-fields
       require('synthweave').setup {
         styles = {
-          comments = { italic = false }, -- Disable italics in comments
+          comments = { italic = true }, -- Disable italics in comments
         },
       }
 
