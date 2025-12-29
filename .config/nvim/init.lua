@@ -427,13 +427,13 @@ require('lazy').setup({
           layout_config = {
             anchor = 'S',
             height = 0.40,
-            width = 0.94,
+            width = 0.97,
             preview_cutoff = 1,
           },
           borderchars = {
-            prompt = { ' ', ' ', ' ', ' ', '┌', '┐', ' ', ' ' },
-            results = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
-            preview = { ' ', ' ', ' ', ' ', ' ', ' ', '┘', '└' },
+            prompt = { '─', '│', '─', '│', '┌', '┐', '┼', '┼' },
+            results = { '─', '│', '─', '│', '├', '┤', '┘', '└' },
+            preview = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
           },
           border = true,
         },
