@@ -35,14 +35,15 @@ alias confkitty='nvim ~/.config/kitty/kitty.conf'
 alias hyprmatrix='cmatrix -C magenta'
 alias psql='sudo systemctl start postgresql'
 
-alias web='~/scripts/webdev.bsh'
-alias java='~/scripts/java.bsh'
-alias c#='~/scripts/csharp.bsh'
-alias cpp='~/scripts/cpp.bsh'
-alias py='~/scripts/python.bsh'
-alias ts='~/scripts/typescript.bsh'
+alias web='~/scripts/webdev.sh'
+alias java='~/scripts/java.sh'
+alias c#='~/scripts/csharp.sh'
+alias cpp='~/scripts/cpp.sh'
+alias py='~/scripts/python.sh'
+alias ts='~/scripts/typescript.sh'
+alias sesh='~/scripts/sessionizer.sh'
 
-alias vnc='~/scripts/wayvnc.bsh'
+alias vnc='~/scripts/wayvnc.sh'
 
 gpprun() {
     local src="$1"
