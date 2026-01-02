@@ -43,6 +43,8 @@ alias py='~/scripts/python.sh'
 alias ts='~/scripts/typescript.sh'
 alias sesh='~/scripts/sessionizer.sh'
 
+bindkey -s '^[f' 'sesh\n'
+
 alias vnc='~/scripts/wayvnc.sh'
 
 gpprun() {
