@@ -35,15 +35,7 @@ alias confkitty='nvim ~/.config/kitty/kitty.conf'
 alias hyprmatrix='cmatrix -C magenta'
 alias psql='sudo systemctl start postgresql'
 
-alias web='~/scripts/webdev.sh'
-alias java='~/scripts/java.sh'
-alias c#='~/scripts/csharp.sh'
-alias cpp='~/scripts/cpp.sh'
-alias py='~/scripts/python.sh'
-alias ts='~/scripts/typescript.sh'
-alias sesh='~/scripts/sessionizer.sh'
-
-bindkey -s '^[f' 'sesh\n'
+bindkey -s '^[s' '^U~/scripts/sessionizer.sh^M'
 
 alias vnc='~/scripts/wayvnc.sh'
 

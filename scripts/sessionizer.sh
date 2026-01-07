@@ -162,4 +162,10 @@ tmux has-session -t "$session" 2>/dev/null || {
     tmux select-window -t nvim
 }
 
-tmux attach -t "$session"
+if [[ -z "$TMUX" ]]; then
+    # Use -u to force UTF-8 and ensure it attaches to the current TTY
+    exec tmux attach-session -t "$session"
+else
+    # If we are already in tmux, we MUST use switch-client
+    tmux switch-client -t "$session"
+fi
