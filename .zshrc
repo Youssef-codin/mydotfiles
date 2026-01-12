@@ -34,6 +34,7 @@ alias confhypr='nvim ~/.config/hypr/hyprland.conf'
 alias confkitty='nvim ~/.config/kitty/kitty.conf'
 alias hyprmatrix='cmatrix -C magenta'
 alias psql='sudo systemctl start postgresql'
+alias sync='rclone sync ~/Documents gDrive:DocumentsBackup'
 
 bindkey -s '^[s' '^U~/scripts/sessionizer.sh^M'
 
