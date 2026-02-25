@@ -59,3 +59,10 @@ export SDKMAN_DIR="$HOME/.sdkman"
 export PATH="$PATH:$HOME/.dotnet/tools"
 export PATH="/home/joe-arch/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="/home/joe-arch/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
+
+export ANDROID_SDK_ROOT=/opt/android-sdk
+export ANDROID_HOME=$ANDROID_SDK_ROOT
+export ANDROID_AVD_HOME="$HOME/.android/avd"
+export PATH="$PATH:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin"
+
+alias startemu='emulator -avd flutter-dev -no-snapshot -no-boot-anim &'

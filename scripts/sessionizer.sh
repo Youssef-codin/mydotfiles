@@ -153,7 +153,7 @@ session=$(basename "$project")
 
 tmux has-session -t "$session" 2>/dev/null || {
     tmux new-session -d -s "$session" -n nvim -c "$path"
-    tmux send-keys -t "$session:nvim" "nvim ." C-m
+    tmux send-keys -t "$session:nvim" "nvim" C-m
 
     tmux new-window -t "$session" -n run -c "$path"
     tmux new-window -t "$session" -n git -c "$path"
