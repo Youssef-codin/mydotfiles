@@ -59,6 +59,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 export PATH="$PATH:$HOME/.dotnet/tools"
 export PATH="/home/joe-arch/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="/home/joe-arch/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
+export PATH=$PATH:$(go env GOPATH)/bin
 
 export ANDROID_SDK_ROOT=/opt/android-sdk
 export ANDROID_HOME=$ANDROID_SDK_ROOT

@@ -160,7 +160,7 @@ tmux has-session -t "$session" 2>/dev/null || {
     tmux send-keys -t "$session:git" "lazygit" C-m
 
     tmux new-window -t "$session" -n code -c "$path"
-    tmux send-keys -t "$session:code" "opencode" C-m
+    tmux send-keys -t "$session:code" "kilo" C-m
 
     tmux select-window -t nvim
 }
