@@ -33,7 +33,6 @@ alias lz='lazygit'
 alias confhypr='nvim ~/.config/hypr/hyprland.conf'
 alias confkitty='nvim ~/.config/kitty/kitty.conf'
 alias hyprmatrix='cmatrix -C magenta'
-alias psql='sudo systemctl start postgresql'
 alias sync='rclone sync ~/Documents gDrive:DocumentsBackup'
 
 bindkey -s '^[s' '^U~/scripts/sessionizer.sh^M'
@@ -54,9 +53,11 @@ fastfetch
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+#
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 export PATH="$PATH:$HOME/.dotnet/tools"
+export SUDO_EDITOR=nvim
 export PATH="/home/joe-arch/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="/home/joe-arch/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 export PATH=$PATH:$(go env GOPATH)/bin
