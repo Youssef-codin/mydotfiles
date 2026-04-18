@@ -34,6 +34,7 @@ alias confhypr='nvim ~/.config/hypr/hyprland.conf'
 alias confkitty='nvim ~/.config/kitty/kitty.conf'
 alias hyprmatrix='cmatrix -C magenta'
 alias sync='rclone sync ~/Documents gDrive:DocumentsBackup'
+alias mnt='~/scripts/mount-games.sh'
 
 bindkey -s '^[s' '^U~/scripts/sessionizer.sh^M'
 
@@ -54,8 +55,10 @@ eval "$(zoxide init zsh)"
 source <(fzf --zsh)
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 #
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+if [[ $- == *i* ]]; then
+  export SDKMAN_DIR="$HOME/.sdkman"
+  [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+fi
 export PATH="$PATH:$HOME/.dotnet/tools"
 export SUDO_EDITOR=nvim
 export PATH="/home/joe-arch/.config/herd-lite/bin:$PATH"
