@@ -18,7 +18,6 @@ ZSH_HIGHLIGHT_STYLES[builtin]='fg=#00ffff'
 
 # Paths: Neon Orange
 ZSH_HIGHLIGHT_STYLES[path]='fg=#ff8800'  
- 
 
 # Options (e.g., -l, --help): Neon yellow
 ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=#ffff00,bold'  
@@ -61,16 +60,7 @@ if [[ $- == *i* ]]; then
 fi
 export PATH="$PATH:$HOME/.dotnet/tools"
 export SUDO_EDITOR=nvim
-export PATH="/home/joe-arch/.config/herd-lite/bin:$PATH"
-export PHP_INI_SCAN_DIR="/home/joe-arch/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 export PATH=$PATH:$(go env GOPATH)/bin
-
-export ANDROID_SDK_ROOT=/opt/android-sdk
-export ANDROID_HOME=$ANDROID_SDK_ROOT
-export ANDROID_AVD_HOME="$HOME/.android/avd"
-export PATH="$PATH:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin"
-
-alias startemu='emulator -avd flutter-dev -no-snapshot -no-boot-anim &'
 export PATH=~/.npm-global/bin:$PATH # or /home/joe-arch/.bashrc
 export PATH="/home/joe-arch/.bun/bin:$PATH"
 
