@@ -26,6 +26,7 @@ ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=#ffff00,bold'
 
 # Aliases: Cyan (to differentiate from commands)
 ZSH_HIGHLIGHT_STYLES[alias]='fg=#00ffff'  
+
 alias ls='ls -C -t -X -A -p --color=auto'
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias lzdot='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
@@ -35,26 +36,25 @@ alias confkitty='nvim ~/.config/kitty/kitty.conf'
 alias hyprmatrix='cmatrix -C magenta'
 alias sync='rclone sync ~/Documents gDrive:DocumentsBackup'
 alias mnt='~/scripts/mount-games.sh'
+alias vnc='~/scripts/wayvnc.sh'
 
 bindkey -s '^[s' '^U~/scripts/sessionizer.sh^M'
 
-alias vnc='~/scripts/wayvnc.sh'
-
-gpprun() {
-    local src="$1"
-    local out="${src%.*}"  # strip extension -> main.cpp -> main
-    g++ "$src" -o "$out" && ./"$out"
-}
-
 # Precommands (e.g., sudo, time): Neon blue
 ZSH_HIGHLIGHT_STYLES[precommand]='fg=#04d9ff'  
+
+#ssh
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+if ! ssh-add -l &>/dev/null; then
+    pass show prod.pem | ssh-add -
+fi
 
 fastfetch
 
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-#
+
 if [[ $- == *i* ]]; then
   export SDKMAN_DIR="$HOME/.sdkman"
   [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
@@ -71,3 +71,6 @@ export ANDROID_AVD_HOME="$HOME/.android/avd"
 export PATH="$PATH:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin"
 
 alias startemu='emulator -avd flutter-dev -no-snapshot -no-boot-anim &'
+export PATH=~/.npm-global/bin:$PATH # or /home/joe-arch/.bashrc
+export PATH="/home/joe-arch/.bun/bin:$PATH"
+

@@ -159,6 +159,9 @@ tmux has-session -t "$session" 2>/dev/null || {
     tmux new-window -t "$session" -n git -c "$path"
     tmux send-keys -t "$session:git" "lazygit" C-m
 
+    tmux new-window -t "$session" -n claude -c "$path"
+    tmux send-keys -t "$session:claude" "claude" C-m
+
     tmux new-window -t "$session" -n code -c "$path"
     tmux send-keys -t "$session:code" "opencode" C-m
 
